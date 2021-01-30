@@ -28,7 +28,7 @@ class Athlete extends React.Component<IAthleteProps, IAthleteState> {
     const num_sports_purchases = 57
     return (
       <>
-      <div className={style.background}>
+      <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={AthleteLogo} />
       <h4 className={style.basicfont}>You are an</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Athlete</h2>

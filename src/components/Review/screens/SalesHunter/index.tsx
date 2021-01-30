@@ -29,7 +29,7 @@ class SalesHunter extends React.Component<ISalesHunterProps, ISalesHunterState> 
     const sales = 10
     return (
       <>
-      <div className={style.background}>
+      <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={HunterLogo} />
       <h4 className={style.basicfont}>You are a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Sales Hunter</h2>

@@ -4,7 +4,6 @@ import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
 import Mattwork from '../Mattwork';
 import SalesHunter from '../SalesHunter';
-import Freshman from '../Freshman';
 import Fashionista from '../Fashionista';
 import Athlete from '../Athlete';
 import TechWhiz from '../TechWhiz';
@@ -66,8 +65,6 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <SalesHunter purchases={this.state.purchases}/>
         </div>
-
-        { /* <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}><Freshman user_id={this.props.user_id}/></div> */ }
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Fashionista purchases={this.state.purchases}/>

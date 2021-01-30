@@ -28,7 +28,7 @@ class Fashionista extends React.Component<IFashionistaProps, IFashionistaState> 
     const num_fashion = 32
     return (
       <>
-      <div className={style.background}>
+      <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={FashionLogo} />
       <h4 className={style.basicfont}>You were a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Fashionista</h2>

@@ -7,6 +7,7 @@ class Coin extends React.Component {
     const formatted_savings = "$312.40";
     return (
     <>
+    <div id="to_share">
     <div className={styles.container}>
       <div className={styles.coin}>
         <div className={styles.coin__front}></div>
@@ -26,6 +27,7 @@ class Coin extends React.Component {
       </div>
     </div>
       <h5 className={styles.basicfont}>You saved <span className={styles.highlight}>{formatted_savings}</span> from sales &amp; vouchers last year. Woohoo!</h5>
+    </div>
     </>
     );
   }

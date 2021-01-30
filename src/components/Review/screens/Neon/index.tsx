@@ -6,7 +6,7 @@ import ProductRecs from 'assets/common/images/product_recs.jpg';
 class Neon extends React.Component {
   public render() {
     return (
-      <div className={styles.background}>
+      <div className={styles.background} id="to_share">
         <div className={styles.container}>
           <div className={styles.border}></div>
           <div className={styles.blocker1}></div>

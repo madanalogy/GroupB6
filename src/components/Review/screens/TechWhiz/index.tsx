@@ -28,7 +28,7 @@ class TechWhiz extends React.Component<ITechWhizProps, ITechWhizState> {
     const purchases = 12
     return (
       <>
-      <div className={style.background}>
+      <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={WizardLogo} />
       <h4 className={style.basicfont}>You are a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Wizard</h2>
