@@ -1,6 +1,7 @@
 .transitionWidth {
   opacity: 1;
-  transition: background-color .6s ease, transform .6s ease, opacity .6s ease, width .6s ease;
+  transition: background-color 0.6s ease, transform 0.6s ease, opacity 0.6s ease,
+    width 0.6s ease;
   height: 0px;
 }
 
@@ -10,7 +11,7 @@
 
 .hiddenByTranslate {
   opacity: 0;
-  transform: translate(-100%)
+  transform: translate(-100%);
 }
 
 .oneButtonContainer {
@@ -90,5 +91,5 @@
 }
 
 .navDot.selected {
-  background: #EE4D2D;
+  background: #ee4d2d;
 }

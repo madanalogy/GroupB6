@@ -14,7 +14,6 @@ function App() {
 
         {/* Create your app routes here  */}
         <Route path='/' component={Review} />
-        
       </Switch>
     </Router>
   );

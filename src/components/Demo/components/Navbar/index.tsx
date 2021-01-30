@@ -48,7 +48,7 @@ const MENU = [
   },
   {
     route: '/demo/mattwork',
-    text: 'Matt\'s Playground',
+    text: "Matt's Playground",
   },
 ];
 

@@ -79,7 +79,7 @@
     "build-dev": "webpack --env.env=dev --progress --profile --colors",
     "build-prod": "webpack --env.env=prod --progress --profile --colors",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss}\"",
-    "eslint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "eslint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "stylelint": "stylelint --fix \"src/**/*.scss\"",
     "typecheck": "tsc --noEmit"
   },
