@@ -16,9 +16,7 @@
     "react-hot-loader": "^4.12.13",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
-    "react-slick": "^0.28.0",
     "redux": "^4.0.1",
-    "slick-carousel": "^1.8.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
     "vconsole": "^3.3.4"
