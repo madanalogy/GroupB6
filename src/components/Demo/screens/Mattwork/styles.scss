@@ -1,0 +1,57 @@
+.background {
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: -1;  
+}
+
+.animBack {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 100px;
+  margin: auto;
+  font-size: 3em; 
+  font-family: 'Budokan Rounded', sans-serif;
+  color: #EE4D2D;
+  animation: animateBackwards 1s ease-in-out forwards;
+  transform-origin: center;
+}
+.animFwd {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 100px;
+  font-size: 3em; 
+  margin: auto;
+  color: #EE4D2D;
+  font-family: 'Budokan Rounded', sans-serif;
+  animation: animateForwards 1s ease-in-out forwards;
+  transform-origin: center;
+}
+.basicfont {
+  display: block;
+  text-align: center;
+  position: relative;
+  font-family: 'Budokan Rounded', sans-serif;
+  animation: animateFade 1s ease-in-out forwards;
+}
+
+@import url('http://fonts.cdnfonts.com/css/budokan-rounded');
+
+@keyframes animateForwards {
+  from { top: 0; opacity: 0; transform: rotate(0deg); }
+  to { top: 2.0em; opacity: 1; transform: rotate(-15deg); }
+}
+@keyframes animateBackwards {
+  from { top: 0; opacity: 0; transform: rotate(0deg); }
+  to { top: 1.7em; opacity: 1; transform: rotate(25deg); }
+}  
+@keyframes animateFade {
+  from { top: 0; opacity: 0; }
+  to { top: 4.5em; opacity: 1; }
+}  
