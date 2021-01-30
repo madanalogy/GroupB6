@@ -22,7 +22,9 @@ function Home() {
       <br />
       <br />
 
-      <div>Hello World!</div>
+      <Link to='/review' replace>
+        Shopee Year-in-Review
+      </Link>
     </div>
   );
 }
