@@ -6,6 +6,8 @@ Shopee Throwback is a feature that aims to provide users with fun yet insightful
 
 ### [Project Writeup](https://docs.google.com/document/d/1NqKvZ_d_Aaz7atpSg-vqtyZmcJRKp_pGIPFl6QihHXk/edit?usp=sharing)
 
+Mocked APIs available via Postman [here](https://www.getpostman.com/collections/af4ffa680abcc04f56a3).
+
 # Development Guide
 
 Code developed from boilerplate provided during Shopee Ultra-Hackathon 2021
