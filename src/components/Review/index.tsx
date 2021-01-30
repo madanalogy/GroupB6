@@ -34,8 +34,6 @@ function Review() {
         if (response && response.data && response.data.user_id && response.data.user_name) {
           setUserId(response.data.user_id);
           setUserName(response.data.user_name);
-          console.log(userName);
-          console.log(userId)
         }
       })();
     }, []);

@@ -13,6 +13,10 @@ import Neon from '../Neon';
 import Coin from '../Coin';
 // import LabelUser from '../LabelUser'
 import styles from './styles.scss';
+import { get } from 'libraries/utils/fetch';
+import consts from 'consts';
+
+import axios from 'axios';
 
 interface ICarouselProps {
   user_id: number;
@@ -23,6 +27,7 @@ interface ICarouselState {
   totalSlides: number;
   currSlideIdx: number;
   purchases: object;
+  year: string;
 }
 
 class Carousel extends React.Component<ICarouselProps, ICarouselState> {
@@ -31,7 +36,8 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     this.state = {
       totalSlides: 8,
       currSlideIdx: 0,
-      purchases: {}
+      purchases: {},
+      year: '2020'
     };
   }
 
@@ -54,8 +60,28 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     });
   }
 
+  async componentDidMount() {
+
+    const response = await axios.get(`${consts.USER_GET_PURCHASES}`, {
+      params: {
+        user_id: this.props.user_id,
+        year: this.state.year
+      }
+    })
+
+    if (response && response.data && response.data.purchase_history) {
+      this.setState((state: ICarouselState) => {
+        state.purchases = response.data.purchase_history;
+        return state
+      });
+    }
+  }
+
+
+
   render() {
     const { totalSlides, currSlideIdx } = this.state;
+
     return (
       <>
       <div><span onClick={this.next} id="to_share">
