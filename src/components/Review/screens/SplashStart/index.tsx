@@ -20,13 +20,14 @@ class SplashStart extends React.Component {
       }
   }
   public render() {
+    const year = new Date().getUTCFullYear();
     return (
         <div className={styles.background} id="to_share">
           <h1 className={styles.animBack}>Shopee</h1>
           <h1 className={styles.animFwd}>Throwback</h1>
-          <h1 className={styles.animBack}>2020</h1>
+          <h1 className={styles.animBack}>{year}</h1>
           <div className={styles.basicfont}>
-            <h4>2020’s been a roller coaster ride.</h4>
+            <h4>{year}’s been a roller coaster ride.</h4>
             <h4>Here's a few things that happened.</h4>
           </div>
 
