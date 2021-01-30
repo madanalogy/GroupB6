@@ -30,6 +30,8 @@ class Fashionista extends React.Component<IFashionistaProps, IFashionistaState> 
       <>
       <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={FashionLogo} />
+      <br />
+      <br />
       <h4 className={style.basicfont}>You were a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Fashionista</h2>
       <h4 className={style.basicfont}>You purchased {num_fashion} fashion items.</h4>

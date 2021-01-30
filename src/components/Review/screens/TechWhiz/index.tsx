@@ -30,6 +30,8 @@ class TechWhiz extends React.Component<ITechWhizProps, ITechWhizState> {
       <>
       <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={WizardLogo} />
+      <br />
+      <br />
       <h4 className={style.basicfont}>You are a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Wizard</h2>
       <h4 className={style.basicfont}>You made {purchases} tech purchases last year.</h4>

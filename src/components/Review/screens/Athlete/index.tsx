@@ -30,6 +30,8 @@ class Athlete extends React.Component<IAthleteProps, IAthleteState> {
       <>
       <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={AthleteLogo} />
+      <br />
+      <br />
       <h4 className={style.basicfont}>You are an</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Athlete</h2>
       <h4 className={style.basicfont}>You purchased {num_sports_purchases} sports-related items.</h4>

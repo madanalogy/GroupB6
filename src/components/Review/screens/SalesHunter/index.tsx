@@ -31,6 +31,8 @@ class SalesHunter extends React.Component<ISalesHunterProps, ISalesHunterState> 
       <>
       <div className={style.background} id="to_share">
       <img className={style.imagelogo} src={HunterLogo} />
+      <br />
+      <br />
       <h4 className={style.basicfont}>You are a</h4>
       <h2 className={style.basicfont + ' ' + style.highlight}>Sales Hunter</h2>
       <h4 className={style.basicfont}>You participated in {sales} sales last year.</h4>

@@ -15,7 +15,7 @@ class Neon extends React.Component {
           <h1 className={styles.neon1}>LIKE</h1>
           { /*<h2 className={styles.neon2}>These</h2> */ }
           { /* <!--No time, so let's flesh this mockup quick--> */}
-          <img className={styles.padTop} src={ProductRecs}/>
+          <img className={styles.padTopImage} src={ProductRecs}/>
           <h4 className={styles.basicfont + ' ' + styles.padTop}>based on your year's purchases</h4>
         </div>
       </div>
