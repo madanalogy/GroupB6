@@ -20,7 +20,7 @@ class SplashStart extends React.Component {
       }
   }
   public render() {
-    const year = new Date().getUTCFullYear();
+    const year = new Date().getUTCFullYear() - 1;
     return (
         <div className={styles.background} id="to_share">
           <h1 className={styles.animBack}>Shopee</h1>
