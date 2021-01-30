@@ -38,10 +38,12 @@ function Review() {
         }
       })();
     }, []);
+    getUserInfo();
   
     return (
       <>
-        {/* <Mattwork/> */}
+        <Mattwork/>
+        <br />
         <LabelUser user_id={userId} user_name={userName}/>
       </>
     );
