@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Bridge from 'libraries/bridges';
-import Button from '../../../Demo/components/Button';
+import Button from '../../components/Button';
 
 import styles from './styles.scss';
 
