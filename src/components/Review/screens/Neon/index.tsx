@@ -10,9 +10,9 @@ class Neon extends React.Component {
           <div className={styles.border}></div>
           <div className={styles.blocker1}></div>
           <div className={styles.blocker2}></div>
-          <h2 className={styles.neon2}>Drink More</h2>
-          <h1 className={styles.neon1}>LOCAL</h1>
-          <h2 className={styles.neon2}>Beer</h2>
+          <h2 className={styles.neon2}>You May</h2>
+          <h1 className={styles.neon1}>LIKE</h1>
+          <h2 className={styles.neon2}>These</h2>
         </div>
       </div>
     );

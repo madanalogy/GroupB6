@@ -2,16 +2,21 @@
   background-color: #222;
   display: block;
   z-index: -99999;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 500px;
+  position: relative;
+  top: -70px;
 }
 
 .container {
   position: relative;
-  width: 800px;
+  /* width: 800px; */
   margin: 10% auto;
+  transform: scale(0.7);
   text-align: center;
 }
 .border {
-  width: 600px;
+  width: 560px;
   height: 150px;
   background-color: #222;
   border: 3px solid #0cd808;
@@ -22,26 +27,35 @@
   margin-left: -327px;
   box-shadow: 0 0 1px #b3ff51, 0 0 2px #b3ff51, 0 0 6px #b3ff51, 0 0 12px #b3ff51, inset 0 0 1px #b3ff51, inset 0 0 2px #b3ff51, inset 0 0 6px #b3ff51, inset 0 0 12px #b3ff51;
   z-index: -9990;
+  margin: auto;
+  left: -50px;
+  right: 0;
 }
 .blocker1 {
-  width: 405px;
+  width: 350px;
   height: 30px;
   position: absolute;
   top: 20px;
-  left: 200px;
+  /* left: 200px; */
   background-color: #222;
   z-index: -9990;
   box-shadow: 0 0 10px #222, 0 0 5px #222, 0 0 2px #222, 0 0 1px #222;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 .blocker2 {
-  width: 160px;
+  width: 240px;
   height: 30px;
   position: absolute;
   bottom: 30px;
-  left: 320px;
+  /* left: 320px; */
   background-color: #222;
   z-index: -9990;
   box-shadow: 0 0 10px #222, 0 0 5px #222, 0 0 2px #222, 0 0 1px #222;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 .neon1 {
   margin: -25px 0 -5px;
@@ -53,6 +67,8 @@
   text-shadow: 0 0 1px #ff1919, 0 0 2px #ff1919, 0 0 6px #ff1919, 0 0 12px #ff1919;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #db0808;
+  position: relative;
+  left: 20px;
 }
 .neon2 {
   margin: 0;

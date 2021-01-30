@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Mattwork from '../Mattwork';
 import MattLabelsTheUser from '../MattLabelsTheUser';
 import Neon from '../Neon';
+import Coin from '../Coin';
 import LabelUser from '../LabelUser'
 import styles from './styles.scss';
 
@@ -61,6 +62,10 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Neon/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Coin/>
         </div>
 
         <li className={styles.navDots}>
