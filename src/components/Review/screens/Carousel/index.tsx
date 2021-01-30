@@ -51,15 +51,18 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     return (
       <>
       <div>
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`} 
+        onClick={this.next} id="to_share">
           <Mattwork/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`} 
+        onClick={this.next} id="to_share">
           <MattLabelsTheUser/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`} 
+        onClick={this.next} id="to_share">
           <Neon/>
         </div>
 
@@ -90,7 +93,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
               );
             }}
           >
-            Share this slide
+            Share Slide
           </Button>
         </div>
       </div>
