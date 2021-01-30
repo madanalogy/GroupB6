@@ -29,7 +29,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
   constructor(props) {
     super(props);
     this.state = {
-      totalSlides: 8,
+      totalSlides: 9,
       currSlideIdx: 0,
       purchases: {}
     };
@@ -75,10 +75,6 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
           <Fashionista purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Coin/>
-        </div>
-
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Athlete purchases={this.state.purchases}/>
         </div>
@@ -88,11 +84,15 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <MattLabelsTheUser/>
+          <Coin/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Neon/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 8 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <MattLabelsTheUser/>
         </div>
         </span>
         <li className={styles.navDots}>
