@@ -11,8 +11,8 @@ import TechWhiz from '../TechWhiz';
 import MattLabelsTheUser from '../MattLabelsTheUser';
 import Neon from '../Neon';
 import Coin from '../Coin';
-// import LabelUser from '../LabelUser'
 import styles from './styles.scss';
+import domtoimage from 'dom-to-image';
 
 interface ICarouselProps {
   user_id: number;
@@ -58,7 +58,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     const { totalSlides, currSlideIdx } = this.state;
     return (
       <>
-      <div><span onClick={this.next} id="to_share">
+      <div><span onClick={this.next}>
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Mattwork/>
         </div>
@@ -117,10 +117,13 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         <div className={styles.shareButtonContainer}>
           <Button
             onClick={() => {
-              Bridge.share(
-                '',
-                'https://upload.wikimedia.org/wikipedia/commons/b/b5/Shopee-logo.jpg'
-              );
+              const node = document.getElementById('to_share');
+              domtoimage.toPng(node).then((dataUrl) => {
+                Bridge.share(
+                  '',
+                  dataUrl
+                );
+              })
             }}
           >
             Share Slide
