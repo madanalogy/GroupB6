@@ -1,13 +1,14 @@
 .transitionWidth {
   opacity: 1;
   transition: background-color .6s ease, transform .6s ease, opacity .6s ease, width .6s ease;
+  height: 0px;
 }
 
 .hiddenByHeight {
   height: 0px !important;
 }
 
-.hiddenByWidth {
+.hiddenByTranslate {
   opacity: 0;
   transform: translate(-100%)
 }

@@ -3,6 +3,8 @@ import * as React from 'react';
 import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
 import Mattwork from '../Mattwork';
+import MattLabelsTheUser from '../MattLabelsTheUser';
+import Neon from '../Neon';
 import styles from './styles.scss';
 
 class Carousel extends React.Component {
@@ -38,9 +40,18 @@ class Carousel extends React.Component {
     return (
       <>
       <div>
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByWidth : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Mattwork/>
         </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <MattLabelsTheUser/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Neon/>
+        </div>
+
         <li className={styles.navDots}>
           <label className={`${styles.navDot} ${(currSlideIdx == 0 ? ' ' + styles.selected : "")}`}></label>
           <label className={`${styles.navDot} ${(currSlideIdx == 1 ? ' ' + styles.selected : "")}`}></label>
