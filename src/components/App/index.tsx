@@ -14,10 +14,10 @@ function App() {
         {/* Remove the demo route if your app is ready! */}
         <Route path='/demo' component={Demo} />
 
+        <Route path='/review' component={Review} />
+
         {/* Create your app routes here  */}
         <Route path='/' component={Home} />
-
-        <Route path='/review' component={Review} />
         
       </Switch>
     </Router>
