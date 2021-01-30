@@ -1,0 +1,31 @@
+.background {
+    background-color: #66ff00;
+    display: block;
+    z-index: -99999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    height: 500px;
+    position: relative;
+    top: -70px;
+  }
+
+.imagelogo {
+    border-style: none;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+}
+
+.basicfont {
+    display: block;
+    text-align: center;
+    position: relative;
+    font-family: 'Budokan Rounded', sans-serif;
+    animation: animateFade 1s ease-in-out forwards;
+  }
+
+.highlight {
+    color: #EE4D2D;
+}

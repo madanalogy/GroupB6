@@ -1,3 +1,7 @@
+.container {
+  transform: scale(0.8)
+}
+
 .coin {
   position: relative;
   width: 300px;
@@ -652,4 +656,16 @@
 }
 .coin__edge_image {
   background-image: url(https://placedog.net/540/205);
+}
+
+.basicfont {
+  display: block;
+  text-align: center;
+  position: relative;
+  font-family: 'Budokan Rounded', sans-serif;
+  animation: animateFade 1s ease-in-out forwards;
+}
+
+.highlight {
+  color: #EE4D2D;
 }

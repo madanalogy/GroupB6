@@ -2,21 +2,23 @@ import * as React from 'react';
 
 import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
-import Mattwork from '../Mattwork';
+import SplashStart from '../SplashStart';
 import SalesHunter from '../SalesHunter';
-import Freshman from '../Freshman';
 import Fashionista from '../Fashionista';
 import Athlete from '../Athlete';
 import TechWhiz from '../TechWhiz';
-import MattLabelsTheUser from '../MattLabelsTheUser';
+import SplashEnd from '../SplashEnd';
 import Neon from '../Neon';
 import Coin from '../Coin';
-// import LabelUser from '../LabelUser'
 import styles from './styles.scss';
+<<<<<<< HEAD
 import { get } from 'libraries/utils/fetch';
 import consts from 'consts';
 
 import axios from 'axios';
+=======
+import domtoimage from 'dom-to-image';
+>>>>>>> 06623301a8c23c270658bd76c5cc051893e2da3e
 
 interface ICarouselProps {
   user_id: number;
@@ -84,9 +86,9 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
 
     return (
       <>
-      <div><span onClick={this.next} id="to_share">
+      <div><span onClick={this.next}>
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Mattwork/>
+          <SplashStart/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
@@ -94,31 +96,27 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Freshman user_id={this.props.user_id}/>
-        </div>
-
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Fashionista purchases={this.state.purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Coin/>
-        </div>
-
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Athlete purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <TechWhiz purchases={this.state.purchases}/>
         </div>
 
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Coin/>
+        </div>
+
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <MattLabelsTheUser/>
+          <Neon/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Neon/>
+          <SplashEnd/>
         </div>
         </span>
         <li className={styles.navDots}>
@@ -145,10 +143,13 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         <div className={styles.shareButtonContainer}>
           <Button
             onClick={() => {
-              Bridge.share(
-                '',
-                'https://upload.wikimedia.org/wikipedia/commons/b/b5/Shopee-logo.jpg'
-              );
+              const node = document.getElementById('to_share');
+              domtoimage.toPng(node).then((dataUrl) => {
+                Bridge.share(
+                  '',
+                  dataUrl
+                );
+              })
             }}
           >
             Share Slide
