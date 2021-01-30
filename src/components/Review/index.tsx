@@ -10,6 +10,7 @@ import { get } from 'libraries/utils/fetch';
 
 import './style.scss';
 import Mattwork from './screens/Mattwork';
+import Carousel from './screens/Carousel';
 import LabelUser from './screens/LabelUser';
 
 function Review() {
@@ -42,7 +43,8 @@ function Review() {
     return (
       <>
         {/* <Mattwork/> */}
-        <LabelUser user_id={userId} user_name={userName}/>
+        <Carousel/>
+        {/* <LabelUser user_id={userId} user_name={userName}/> */}
       </>
     );
   } else {
