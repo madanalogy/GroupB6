@@ -46,6 +46,10 @@ const MENU = [
     route: '/demo/shake',
     text: 'Shake',
   },
+  {
+    route: '/demo/mattwork',
+    text: 'Matt\'s Playground',
+  },
 ];
 
 function Navbar({ location }: RouteComponentProps) {
