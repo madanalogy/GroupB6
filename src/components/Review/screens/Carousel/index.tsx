@@ -49,7 +49,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     return (
       <>
       <div>
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByWidth : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByWidth : "")}`} onClick={this.next}>
           <Mattwork/>
         </div>
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByWidth : "")}`}>
@@ -73,6 +73,18 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         </div>
 
         <div className={`${styles.oneButtonContainer} ${(currSlideIdx != totalSlides-1 ? " " + styles.hiddenByHeight : "")}`}><Button onClick={this.prev}>Previous</Button></div>
+      </div>
+      <div className={styles.oneButtonContainer}>
+      <Button
+          onClick={() => {
+            Bridge.share(
+              '',
+              'https://upload.wikimedia.org/wikipedia/commons/b/b5/Shopee-logo.jpg'
+            );
+          }}
+        >
+          Share
+        </Button>
       </div>
       </>
     );
