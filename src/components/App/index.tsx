@@ -15,9 +15,6 @@ function App() {
         <Route path='/demo' component={Demo} />
 
         <Route path='/review' component={Review} />
-
-        {/* Create your app routes here  */}
-        <Route path='/' component={Home} />
         
       </Switch>
     </Router>
