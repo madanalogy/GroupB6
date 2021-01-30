@@ -3,9 +3,9 @@ import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Demo from '../Demo';
+import Review from '../Review';
 
 import Home from 'screens/Home';
-import Review from 'components/Review';
 
 function App() {
   return (
