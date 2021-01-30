@@ -7,25 +7,21 @@ import FashionLogo from 'assets/common/images/singer.png';
 
 import style from './style.scss';
 
-interface IFashionistaState {
-  fashion_purchases: object;
-}
-
 interface IFashionistaProps {
   purchases: object;
 }
 
-class Fashionista extends React.Component<IFashionistaProps, IFashionistaState> {
-  public constructor(props) {
-    super(props);
-    this.state = {
-      fashion_purchases: {}
-    }
-  }
+class Fashionista extends React.Component<IFashionistaProps> {
 
   public render() {
-    //@Matt use this value for now
-    const num_fashion = 32
+    let num_fashion = 0
+
+    for (let i = 0; i < Object.keys(this.props.purchases).length; i += 1) {
+      if (this.props.purchases[i].cat_name == "Clothing") {
+        num_fashion += 1
+      }
+    }
+
     return (
       <>
       <div className={style.background} id="to_share">
