@@ -1,12 +1,11 @@
 .background {
-  position: absolute;
-  background-color: #FFFFFF;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  background-color: #FFF;
+  margin-top: 100px;
+  margin: 16px auto;
+  height: 459px;
+  width: 360px;
   display: block;
-  z-index: -1;  
+  z-index: -1;
 }
 
 .animBack {
@@ -45,11 +44,11 @@
 
 @keyframes animateForwards {
   from { top: 0; opacity: 0; transform: rotate(0deg); }
-  to { top: 2.0em; opacity: 1; transform: rotate(-15deg); }
+  to { top: 1.0em; opacity: 1; transform: rotate(-15deg); }
 }
 @keyframes animateBackwards {
   from { top: 0; opacity: 0; transform: rotate(0deg); }
-  to { top: 1.7em; opacity: 1; transform: rotate(25deg); }
+  to { top: 0.7em; opacity: 1; transform: rotate(25deg); }
 }  
 @keyframes animateFade {
   from { top: 0; opacity: 0; }
