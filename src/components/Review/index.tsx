@@ -42,7 +42,7 @@ function Review() {
     return (
       <>
         {/* <Mattwork/> */}
-        <LabelUser user_id={this.userId} user_name={this.userName}/>
+        <LabelUser user_id={userId} user_name={userName}/>
       </>
     );
   } else {
