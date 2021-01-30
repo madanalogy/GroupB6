@@ -3,9 +3,13 @@ import * as React from 'react';
 import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
 import Mattwork from '../Mattwork';
+import SalesHunter from '../SalesHunter';
+import Freshman from '../Freshman';
+import Fashionista from '../Fashionista';
+import Athlete from '../Athlete';
+import TechWhiz from '../TechWhiz';
 import MattLabelsTheUser from '../MattLabelsTheUser';
 import Neon from '../Neon';
-import LabelUser from '../LabelUser'
 import styles from './styles.scss';
 
 interface ICarouselProps {
@@ -16,14 +20,16 @@ interface ICarouselProps {
 interface ICarouselState {
   totalSlides: number;
   currSlideIdx: number;
+  purchases: object;
 }
 
 class Carousel extends React.Component<ICarouselProps, ICarouselState> {
   constructor(props) {
     super(props);
     this.state = {
-      totalSlides: 5,
-      currSlideIdx: 0
+      totalSlides: 8,
+      currSlideIdx: 0,
+      purchases: {}
     };
   }
 
@@ -51,15 +57,35 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     return (
       <>
       <div>
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
+      <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Mattwork/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <MattLabelsTheUser/>
+          <SalesHunter purchases={this.state.purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Freshman user_id={this.props.user_id}/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Fashionista purchases={this.state.purchases}/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <Athlete purchases={this.state.purchases}/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <TechWhiz purchases={this.state.purchases}/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
+          <MattLabelsTheUser/>
+        </div>
+
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Neon/>
         </div>
 
@@ -69,6 +95,9 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
           <label className={`${styles.navDot} ${(currSlideIdx == 2 ? ' ' + styles.selected : "")}`}></label>
           <label className={`${styles.navDot} ${(currSlideIdx == 3 ? ' ' + styles.selected : "")}`}></label>
           <label className={`${styles.navDot} ${(currSlideIdx == 4 ? ' ' + styles.selected : "")}`}></label>
+          <label className={`${styles.navDot} ${(currSlideIdx == 5 ? ' ' + styles.selected : "")}`}></label>
+          <label className={`${styles.navDot} ${(currSlideIdx == 6 ? ' ' + styles.selected : "")}`}></label>
+          <label className={`${styles.navDot} ${(currSlideIdx == 7 ? ' ' + styles.selected : "")}`}></label>
         </li>
 
         <div className={`${styles.oneButtonContainer} ${(currSlideIdx != 0 ? " " + styles.hiddenByHeight : "")}`}><Button onClick={this.next}>Let's go!</Button></div>
