@@ -7,25 +7,21 @@ import AthleteLogo from 'assets/common/images/running.png';
 
 import style from './style.scss';
 
-interface IAthleteState {
-  sports_purchases: object;
-}
-
 interface IAthleteProps {
   purchases: object;
 }
 
-class Athlete extends React.Component<IAthleteProps, IAthleteState> {
-  public constructor(props) {
-    super(props);
-    this.state = {
-      sports_purchases: {}
-    }
-  }
+class Athlete extends React.Component<IAthleteProps> {
 
   public render() {
-    //@Matt use this value for now
-    const num_sports_purchases = 57
+    let num_sports_purchases = 0
+
+    for (let i = 0; i < Object.keys(this.props.purchases).length; i += 1) {
+      if (this.props.purchases[i].cat_name == "Sports") {
+        num_sports_purchases += 1
+      }
+    }
+
     return (
       <>
       <div className={style.background} id="to_share">

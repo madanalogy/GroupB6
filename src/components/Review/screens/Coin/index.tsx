@@ -2,9 +2,20 @@ import * as React from 'react';
 
 import styles from './styles.scss';
 
-class Coin extends React.Component {
+interface ICoinProps {
+  purchases: object;
+}
+
+class Coin extends React.Component<ICoinProps> {
   public render() {
-    const formatted_savings = "$312.40";
+    let savings = 0
+
+    for (let i = 0; i < Object.keys(this.props.purchases).length; i += 1) {
+      savings += this.props.purchases[i].savings
+    }
+
+    savings = Math.round(savings * 100) / 100
+
     return (
     <>
     <div id="to_share">
@@ -26,7 +37,7 @@ class Coin extends React.Component {
         <div className={styles.coin__shadow}></div>
       </div>
     </div>
-      <h5 className={styles.basicfont}>You saved <span className={styles.highlight}>{formatted_savings}</span> from sales &amp; vouchers last year. Woohoo!</h5>
+      <h5 className={styles.basicfont}>You saved <span className={styles.highlight}>${savings}</span> from sales &amp; vouchers last year. Woohoo!</h5>
     </div>
     </>
     );

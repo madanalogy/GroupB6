@@ -6,7 +6,6 @@ class SplashStart extends React.Component {
   public componentDidMount(){
     const delay = 2;
     const nodes = document.querySelectorAll(".animate");
-    console.log(nodes);
     for(let i=0; i<nodes.length; i++){
         const words = nodes[i].innerText.split(" ");
         nodes[i].innerHTML = "";
@@ -20,7 +19,7 @@ class SplashStart extends React.Component {
       }
   }
   public render() {
-    const year = new Date().getUTCFullYear();
+    const year = new Date().getUTCFullYear() - 1;
     return (
         <div className={styles.background} id="to_share">
           <h1 className={styles.animBack}>Shopee</h1>

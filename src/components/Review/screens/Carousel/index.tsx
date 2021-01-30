@@ -11,6 +11,10 @@ import SplashEnd from '../SplashEnd';
 import Neon from '../Neon';
 import Coin from '../Coin';
 import styles from './styles.scss';
+import { get } from 'libraries/utils/fetch';
+import consts from 'consts';
+
+import axios from 'axios';
 import domtoimage from 'dom-to-image';
 
 interface ICarouselProps {
@@ -22,6 +26,7 @@ interface ICarouselState {
   totalSlides: number;
   currSlideIdx: number;
   purchases: object;
+  year: string;
 }
 
 class Carousel extends React.Component<ICarouselProps, ICarouselState> {
@@ -30,7 +35,8 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     this.state = {
       totalSlides: 8,
       currSlideIdx: 0,
-      purchases: {}
+      purchases: {},
+      year: '2020'
     };
   }
 
@@ -53,8 +59,25 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
     });
   }
 
+  async componentDidMount() {
+
+    const response = await axios.get(`${consts.USER_GET_PURCHASES}`, {
+      params: {
+        user_id: this.props.user_id,
+        year: this.state.year
+      }
+    })
+    if (response.data && response.data.purchase_history) {
+      this.setState((state: ICarouselState) => {
+        state.purchases = response.data.purchase_history;
+        return state
+      });
+    }
+  }
+
   render() {
-    const { totalSlides, currSlideIdx } = this.state;
+    const { totalSlides, currSlideIdx, purchases } = this.state;
+
     return (
       <>
       <div><span onClick={this.next}>
@@ -63,23 +86,23 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <SalesHunter purchases={this.state.purchases}/>
+          <SalesHunter purchases={purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Fashionista purchases={this.state.purchases}/>
+          <Fashionista purchases={purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Athlete purchases={this.state.purchases}/>
+          <Athlete purchases={purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <TechWhiz purchases={this.state.purchases}/>
+          <TechWhiz purchases={purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Coin/>
+          <Coin purchases={purchases}/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
