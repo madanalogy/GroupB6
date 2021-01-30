@@ -3,20 +3,31 @@ import * as React from 'react';
 import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
 import Mattwork from '../Mattwork';
+import LabelUser from '../LabelUser'
 import styles from './styles.scss';
 
-class Carousel extends React.Component {
+interface ICarouselProps {
+  user_id: number;
+  user_name: string;
+}
+
+interface ICarouselState {
+  totalSlides: number;
+  currSlideIdx: number;
+}
+
+class Carousel extends React.Component<ICarouselProps, ICarouselState> {
   constructor(props) {
     super(props);
     this.state = {
       totalSlides: 5,
-      currSlideIdx:0
+      currSlideIdx: 0
     };
   }
 
   // https://stackoverflow.com/questions/39210971/this-setstate-is-undefined
   prev = () => {
-    this.setState((state) => {
+    this.setState((state: ICarouselState) => {
       if (state.currSlideIdx > 0) {
         state.currSlideIdx--;
       }
@@ -25,7 +36,7 @@ class Carousel extends React.Component {
   }
 
   next = () => {
-    this.setState((state) => {
+    this.setState((state: ICarouselState) => {
       if (state.currSlideIdx < state.totalSlides - 1) {
         state.currSlideIdx++;
       }
@@ -40,6 +51,9 @@ class Carousel extends React.Component {
       <div>
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByWidth : "")}`}>
           <Mattwork/>
+        </div>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByWidth : "")}`}>
+          <LabelUser user_id={this.props.user_id} user_name={this.props.user_name}/>
         </div>
         <li className={styles.navDots}>
           <label className={`${styles.navDot} ${(currSlideIdx == 0 ? ' ' + styles.selected : "")}`}></label>

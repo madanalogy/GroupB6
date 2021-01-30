@@ -10,7 +10,6 @@ import { get } from 'libraries/utils/fetch';
 
 import './style.scss';
 import Carousel from './screens/Carousel';
-import LabelUser from './screens/LabelUser';
 
 function Review() {
   const [userId, setUserId] = React.useState(0);
@@ -44,8 +43,7 @@ function Review() {
   
     return (
       <>
-        <Carousel/>
-        {/* <LabelUser user_id={userId} user_name={userName}/> */}
+        <Carousel user_id={userId} user_name={userName}/>
       </>
     );
   } else {
