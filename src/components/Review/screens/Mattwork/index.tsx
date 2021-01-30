@@ -1,22 +1,19 @@
 import * as React from 'react';
 
-import Bridge from 'libraries/bridges';
-import Button from '../../components/Button';
-
 import styles from './styles.scss';
 
 class Mattwork extends React.Component {
   public componentDidMount(){
-    var delay = 2;
-    var nodes = document.querySelectorAll(".animate");
+    const delay = 2;
+    const nodes = document.querySelectorAll(".animate");
     console.log(nodes);
-    for(var i=0; i<nodes.length; i++){
-        var words = nodes[i].innerText.split(" ");
+    for(let i=0; i<nodes.length; i++){
+        const words = nodes[i].innerText.split(" ");
         nodes[i].innerHTML = "";
-        for(var i2=0; i2<words.length; i2++){
-          var item = document.createElement("span");
+        for(let i2=0; i2<words.length; i2++){
+          const item = document.createElement("span");
           item.innerText = words[i2];
-          var calc = (delay+((nodes.length + i2)/3));
+          const calc = (delay+((nodes.length + i2)/3));
           item.style.animationDelay = calc+"s";
           nodes[i].appendChild(item);
         }

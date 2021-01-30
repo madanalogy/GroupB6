@@ -39,6 +39,7 @@ function Review() {
         }
       })();
     }, []);
+    getUserInfo();
   
     return (
       <>
