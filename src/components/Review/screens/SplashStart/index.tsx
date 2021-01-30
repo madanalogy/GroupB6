@@ -6,7 +6,6 @@ class SplashStart extends React.Component {
   public componentDidMount(){
     const delay = 2;
     const nodes = document.querySelectorAll(".animate");
-    console.log(nodes);
     for(let i=0; i<nodes.length; i++){
         const words = nodes[i].innerText.split(" ");
         nodes[i].innerHTML = "";
