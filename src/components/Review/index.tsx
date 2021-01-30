@@ -9,7 +9,6 @@ import { get } from 'libraries/utils/fetch';
 
 
 import './style.scss';
-import Mattwork from './screens/Mattwork';
 import Carousel from './screens/Carousel';
 import LabelUser from './screens/LabelUser';
 
@@ -36,6 +35,8 @@ function Review() {
         if (response && response.data && response.data.user_id && response.data.user_name) {
           setUserId(response.data.user_id);
           setUserName(response.data.user_name);
+          console.log(userName);
+          console.log(userId)
         }
       })();
     }, []);
@@ -43,7 +44,6 @@ function Review() {
   
     return (
       <>
-        {/* <Mattwork/> */}
         <Carousel/>
         {/* <LabelUser user_id={userId} user_name={userName}/> */}
       </>
