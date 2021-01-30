@@ -13,7 +13,6 @@ import CameraAlbum from './screens/CameraAlbum';
 import Location from './screens/Location';
 import Shake from './screens/Shake';
 import Share from './screens/Share';
-import Mattwork from './screens/Mattwork';
 
 import './style.scss';
 
@@ -31,7 +30,6 @@ function Demo() {
           <Route path='/demo/location' component={Location} />
           <Route path='/demo/shake' component={Shake} />
           <Route path='/demo/share' component={Share} />
-          <Route path='/demo/mattwork' component={Mattwork} />
         </Switch>
       </div>
     </>
