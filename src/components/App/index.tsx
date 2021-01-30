@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Demo from '../Demo';
 import Review from '../Review';
 
-import Home from 'screens/Home';
-
 function App() {
   return (
     <Router>
@@ -14,10 +12,8 @@ function App() {
         {/* Remove the demo route if your app is ready! */}
         <Route path='/demo' component={Demo} />
 
-        <Route path='/review' component={Review} />
-
         {/* Create your app routes here  */}
-        <Route path='/' component={Home} />
+        <Route path='/' component={Review} />
         
       </Switch>
     </Router>
