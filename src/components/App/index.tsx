@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Demo from '../Demo';
 
 import Home from 'screens/Home';
+import Review from 'components/Review';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
 
         {/* Create your app routes here  */}
         <Route path='/' component={Home} />
+
+        <Route path='/review' component={Review} />
+        
       </Switch>
     </Router>
   );
