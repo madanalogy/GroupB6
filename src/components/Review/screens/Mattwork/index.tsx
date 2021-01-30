@@ -21,7 +21,7 @@ class Mattwork extends React.Component {
   }
   public render() {
     return (
-        <div className={styles.background}>
+        <div className={styles.background} id="to_share">
           <h1 className={styles.animBack}>Shopee</h1>
           <h1 className={styles.animFwd}>Throwback</h1>
           <h1 className={styles.animBack}>2020</h1>
