@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './styles.scss';
 
-class MattLabelsTheUser extends React.Component {
+class SplashEnd extends React.Component {
   public render() {
     // https://codepen.io/iamhexcoder/pen/Cpdam
     return (
@@ -31,4 +31,4 @@ class MattLabelsTheUser extends React.Component {
   }
 }
 
-export default MattLabelsTheUser;
+export default SplashEnd;

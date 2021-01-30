@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import Bridge from 'libraries/bridges';
 import Button from '../../components/Button';
-import Mattwork from '../Mattwork';
+import SplashStart from '../SplashStart';
 import SalesHunter from '../SalesHunter';
 import Fashionista from '../Fashionista';
 import Athlete from '../Athlete';
 import TechWhiz from '../TechWhiz';
-import MattLabelsTheUser from '../MattLabelsTheUser';
+import SplashEnd from '../SplashEnd';
 import Neon from '../Neon';
 import Coin from '../Coin';
 import styles from './styles.scss';
@@ -59,7 +59,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
       <>
       <div><span onClick={this.next}>
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 0 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Mattwork/>
+          <SplashStart/>
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 1 ? ' ' + styles.hiddenByTranslate : "")}`}>
@@ -87,7 +87,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
         </div>
 
         <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <MattLabelsTheUser/>
+          <SplashEnd/>
         </div>
         </span>
         <li className={styles.navDots}>

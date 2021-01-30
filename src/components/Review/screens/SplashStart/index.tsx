@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './styles.scss';
 
-class Mattwork extends React.Component {
+class SplashStart extends React.Component {
   public componentDidMount(){
     const delay = 2;
     const nodes = document.querySelectorAll(".animate");
@@ -35,4 +35,4 @@ class Mattwork extends React.Component {
   }
 }
 
-export default Mattwork;
+export default SplashStart;
