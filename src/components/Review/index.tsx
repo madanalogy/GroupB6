@@ -32,15 +32,6 @@ function Review() {
   });
 
   if (isUserLoggedIn) {
-    const getUserInfo = React.useCallback(() => {
-      (async () => {
-        const response = await get(`${consts.USER_GET_INFO}`, {});
-        if (response && response.data && response.data.user_id && response.data.user_name) {
-          setUserId(response.data.user_id);
-          setUserName(response.data.user_name);
-        }
-      })();
-    }, []);
     getUserInfo();
   
     return (
