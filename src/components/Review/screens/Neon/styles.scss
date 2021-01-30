@@ -11,12 +11,12 @@
 .container {
   position: relative;
   /* width: 800px; */
-  margin: 10% auto;
+  margin: auto;
   transform: scale(0.7);
   text-align: center;
 }
 .border {
-  width: 540px;
+  width: 470px;
   height: 150px;
   background-color: #222;
   border: 3px solid #0cd808;
@@ -82,3 +82,16 @@
 
 @import url(//db.onlinewebfonts.com/c/96ca0c2a94345ab35a855be0b667733c?family=League+Script);
 @import url(//fonts.googleapis.com/css?family=Quicksand);
+
+.padTop {
+  margin-top: 50px;
+}
+
+.basicfont {
+  display: block;
+  text-align: center;
+  position: relative;
+  font-family: 'Budokan Rounded', sans-serif;
+  animation: animateFade 1s ease-in-out forwards;
+  color: #FFF;
+}

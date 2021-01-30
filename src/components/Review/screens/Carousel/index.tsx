@@ -29,7 +29,7 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
   constructor(props) {
     super(props);
     this.state = {
-      totalSlides: 9,
+      totalSlides: 8,
       currSlideIdx: 0,
       purchases: {}
     };
@@ -67,31 +67,29 @@ class Carousel extends React.Component<ICarouselProps, ICarouselState> {
           <SalesHunter purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
-          <Freshman user_id={this.props.user_id}/>
-        </div>
+        { /* <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}><Freshman user_id={this.props.user_id}/></div> */ }
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 2 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Fashionista purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 3 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Athlete purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 4 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <TechWhiz purchases={this.state.purchases}/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 5 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Coin/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 6 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <Neon/>
         </div>
 
-        <div className={`${styles.transitionWidth} ${(currSlideIdx != 8 ? ' ' + styles.hiddenByTranslate : "")}`}>
+        <div className={`${styles.transitionWidth} ${(currSlideIdx != 7 ? ' ' + styles.hiddenByTranslate : "")}`}>
           <MattLabelsTheUser/>
         </div>
         </span>

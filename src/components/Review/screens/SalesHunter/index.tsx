@@ -5,6 +5,8 @@ import Button from '../../components/Button';
 
 import style from './style.scss';
 
+import HunterLogo from 'assets/common/images/hunter.png';
+
 interface ISalesHunterState {
   amount_saved: number,
 }
@@ -24,9 +26,16 @@ class SalesHunter extends React.Component<ISalesHunterProps, ISalesHunterState> 
 
   public render() {
     //@Matt use this value for now
-    const num_sports_purchases = 243.12
+    const sales = 10
     return (
-      <div>This is the SalesHunter screen</div>
+      <>
+      <div className={style.background}>
+      <img className={style.imagelogo} src={HunterLogo} />
+      <h4 className={style.basicfont}>You are a</h4>
+      <h2 className={style.basicfont + ' ' + style.highlight}>Sales Hunter</h2>
+      <h4 className={style.basicfont}>You participated in {sales} sales last year.</h4>
+      </div>
+      </>
     );
   }
 }
